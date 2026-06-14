@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Js project</title>
+
+    <style>
+
+        #btn {
+            width: 100px;
+            height: 100px;
+
+            margin-left: 800px;
+            margin-top: 500px;
+
+            background-color: red;
+        }
+
+        body {
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body id="body">
+
+    <button id="btn">Change theme</button>
+
+    <script>
+
+        let btn =
+            document.getElementById("btn");
+
+        let darkMode = false;
+
+        let body =
+            document.getElementById("body");
+
+        btn.onclick = function () {
+
+            if (darkMode == false) {
+
+                body.style.backgroundColor = "black";
+
+                darkMode = true;
+
+            } else {
+
+                body.style.backgroundColor = "white";
+
+                darkMode = false;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
