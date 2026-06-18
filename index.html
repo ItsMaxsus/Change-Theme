@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Calculator 0.1</title>
+    </head>
+    <style>
+        #div1{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #div2{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 5px;
+        }
+        #div3{
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+        }
+        #addBtn{
+            width: 60px;
+            height: 35px;
+            background-color: rgb(156, 255, 110);
+        }
+        #minBtn{
+            width: 60px;
+            height: 35px;
+            background-color: rgb(255, 145, 145);
+
+        }
+        #multBtn{
+            width: 60px;
+            height: 35px;
+            background-color: rgb(4, 0, 255);
+
+        }
+        #diviBtn{
+            width: 60px;
+            height: 35px;
+            background-color: rgb(0, 217, 255);
+
+        }
+
+        body{
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        #ansT{
+            color: rgb(47, 0, 255);            
+        }
+        #version{
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            color: rgb(156, 156, 156);
+        }
+        #theme{
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        height: 35px;
+        width: 120px;
+        border-radius: 999px;
+        border: none;
+        position: relative;
+        bottom: 240px;
+        left: 10px;
+        }
+    
+
+    </style>
+
+    <body id="body">
+
+        
+        <div id="div1">
+            <input id="inpt1">
+            <input id="inpt2">
+        </div>
+        <div id="div2">
+            <button id="addBtn">ADD</button>
+            <button id="minBtn">Minus</button>
+            <button id="multBtn">Multiply</button>
+            <button id="diviBtn">Division</button>
+        </div>
+        <div id="div3">
+            <h1 id="ansT">Answer</h1>
+        </div>
+
+        <div id="theme">
+        <button id="themeB">Change theme</button>
+            </div>
+        <p id="version">Version 0.5</p>
+
+
+
+    <script>
+
+        let inpt1 = 
+        document.getElementById("inpt1");
+        let inpt2 = 
+        document.getElementById("inpt2");
+        let addBtn = 
+        document.getElementById("addBtn");
+        let ansT = 
+        document.getElementById("ansT");
+        let themeBtn = 
+        document.getElementById("themeB")
+        let minBtn = 
+        document.getElementById("minBtn");
+        let multBtn = 
+        document.getElementById("multBtn")
+        let diviBtn = 
+        document.getElementById("diviBtn")
+        let body = 
+        document.getElementById("body")
+        let nightmode = true;
+
+        addBtn.onclick = function(){
+            let ans = 
+            Number(inpt1.value) + Number(inpt2.value)
+            ansT.textContent = "The answer is : " + ans;
+            ansT.style.color = "green";
+
+        }
+
+        minBtn.onclick = function(){
+            let ans = 
+            Number(inpt1.value) - Number(inpt2.value);
+            ansT.textContent = "The answer is : " + ans;
+            ansT.style.color = "red";
+        }
+        multBtn.onclick = function(){
+            let ans = 
+            Number(inpt1.value) * Number(inpt2.value);
+            ansT.textContent = "The answer is : " + ans;
+            ansT.style.color = "blue";
+        }
+        diviBtn.onclick = function(){
+            let ans = 
+            Number(inpt1.value) / Number(inpt2.value);
+            ansT.textContent = "The answer is : " + ans;
+            ansT.style.color = " rgb(0, 217, 255)"
+        }
+
+        themeBtn.onclick = function(){
+            if(nightmode === true){
+            body.style.backgroundColor = "gray";
+            nightmode = false;
+        }
+        else{
+            body.style.backgroundColor = "black";
+            nightmode = true;
+
+        }
+    }
+
+</script>
+
+
+</body>
+
+</html>
